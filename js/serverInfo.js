@@ -159,7 +159,7 @@ function ServerInfoController($scope, rconService, $routeParams, $interval) {
   rconService.InstallService($scope, _refresh);
 
   // TODO: move updateinterval to service
-  var timer = $interval(_refresh, 1000);
+  var timer = $interval(_refresh, 10000);
   $scope.$on("$destroy", function() {
     $interval.cancel(timer);
     $scope.serverinfo = {};
