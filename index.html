@@ -28,11 +28,13 @@
 
       </div>
 
-      <div class="col-sm-10" ng-show="Connected">
-
+      <div class="col-sm-9" ng-show="Connected">
         <h1 class="page-header">{{$route.current.Title}}</h1>
         <div class="row" ng-view></div>
+      </div>
 
+      <div class="col-sm-1" ng-show="Connected">
+        <!-- nothing -->
       </div>
 
     </div>
